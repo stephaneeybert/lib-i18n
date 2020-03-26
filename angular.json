@@ -2,5 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "lib-i18n": {
+      "projectType": "library",
+      "root": "projects/lib-i18n",
+      "sourceRoot": "projects/lib-i18n/src",
+      "prefix": "i18n",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-i18n/tsconfig.lib.json",
+            "project": "projects/lib-i18n/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-i18n/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-i18n/src/test.ts",
+            "tsConfig": "projects/lib-i18n/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-i18n/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-i18n/tsconfig.lib.json",
+              "projects/lib-i18n/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "1351a870-d668-43b3-a895-1d2df31180a9"
+  },
+  "defaultProject": "lib-i18n"
 }
