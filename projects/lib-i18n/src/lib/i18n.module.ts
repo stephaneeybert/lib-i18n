@@ -32,11 +32,29 @@ export class I18nModule {
 
   private initLanguageTranslation(): void {
     this.translateService.addLangs([LANGUAGE_CODE_ENGLISH, LANGUAGE_CODE_FRANCAIS])
-    // The default language used as a fallback if a translation isn't found for the current language
+    const browserLanguage: string = this.translateService.getBrowserLang();
+    console.log('The browser current language is: ' + browserLanguage);
+    let selectedLanguage: string;
+    if (this.translateService.getLangs().includes(browserLanguage)) {
+      selectedLanguage = browserLanguage;
+    } else {
+      selectedLanguage = LANGUAGE_CODE_ENGLISH;
+    }
+    this.translateService.setDefaultLang(selectedLanguage);
+    this.translateService.use(selectedLanguage);
+    console.log('The language selected by the library is: ' + selectedLanguage);
+  }
+
+  public initEnglish(): void {
+    this.translateService.setDefaultLang(LANGUAGE_CODE_ENGLISH);
+    this.translateService.use(LANGUAGE_CODE_ENGLISH);
+    console.log('The english language was selected explicitly');
+  }
+
+  public initFrench(): void {
     this.translateService.setDefaultLang(LANGUAGE_CODE_FRANCAIS);
-    // The language to use
     this.translateService.use(LANGUAGE_CODE_FRANCAIS);
-    console.log('The browser current language is: ' + this.translateService.getBrowserLang());
+    console.log('The french language was selected explicitly');
   }
 
 }
