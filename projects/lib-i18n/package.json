@@ -1,9 +1,32 @@
 {
-  "name": "lib-i18n",
+  "name": "@stephaneeybert/lib-i18n",
   "version": "0.0.1",
+  "description": "The lib-i18n Angular library",
+  "keywords": [
+    "Angular",
+    "Library"
+  ],
+  "author": "Stephane",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephaneeyber/lib-i18n"
+  },
+  "homepage": "https://github.com/stephaneeyber/lib-i18n#readme",
   "peerDependencies": {
-    "@angular/common": "^9.1.0",
-    "@angular/core": "^9.1.0",
-    "tslib": "^1.10.0"
+    "@angular/animations": "~9.1.0",
+    "@angular/common": "~9.1.0",
+    "@angular/compiler": "~9.1.0",
+    "@angular/core": "~9.1.0",
+    "@angular/forms": "~9.1.0",
+    "@angular/platform-browser": "~9.1.0",
+    "@angular/platform-browser-dynamic": "~9.1.0",
+    "@angular/router": "~9.1.0",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "ngx-translate-cache": "^0.1.1",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "lib-i18n",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "The lib-i18n Angular library",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
