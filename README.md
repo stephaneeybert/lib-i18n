@@ -10,6 +10,7 @@ npm run package;
 
 # Publish the library
 npm publish ./dist/lib-i18n/stephaneeybert-lib-i18n-
+ng-version-sync-parent
 
 # In the client application
 npm install @stephaneeybert/lib-i18n
