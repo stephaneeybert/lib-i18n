@@ -1,6 +1,6 @@
 # LibI18n
 
-# Bump the version
+# Bump the library project version
 cd projects/lib-i18n/;
 npm version patch;
 cd ../../;
