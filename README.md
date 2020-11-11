@@ -14,7 +14,11 @@ ng-version-sync-parent;
 # Publish the library
 npm publish ./dist/lib-i18n/stephaneeybert-lib-i18n-
 
-# In the client application
+# Install the dependencies in the client application
 npm install @stephaneeybert/lib-i18n
 npm install @ngx-translate/core --save-dev
 npm install @ngx-translate/http-loader --save-dev
+
+# Serve again the client application
+Ctrl+C
+ng serve
