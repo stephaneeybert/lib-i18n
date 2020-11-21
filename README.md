@@ -17,7 +17,7 @@ npm publish ./dist/lib-i18n/stephaneeybert-lib-i18n-
 # Install the dependencies in the client application
 npm install @ngx-translate/core --save-dev
 npm install @ngx-translate/http-loader --save-dev
-npm install @stephaneeybert/lib-i18n
+npm install @stephaneeybert/lib-i18n@latest
 
 # Serve again the client application
 Ctrl+C
