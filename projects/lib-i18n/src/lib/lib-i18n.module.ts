@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { I18nModule } from './i18n.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { I18nModule } from './i18n.module';
 
 @NgModule({
   declarations: [],
