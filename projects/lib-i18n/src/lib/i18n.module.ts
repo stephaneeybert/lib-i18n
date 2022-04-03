@@ -32,10 +32,10 @@ export class I18nModule {
 
   private initLanguageTranslation(): void {
     this.translateService.addLangs([LANGUAGE_CODE_ENGLISH, LANGUAGE_CODE_FRANCAIS])
-    const browserLanguage: string = this.translateService.getBrowserLang();
+    const browserLanguage: string | undefined = this.translateService.getBrowserLang();
     console.log('The browser current language is: ' + browserLanguage);
     let selectedLanguage: string;
-    if (this.translateService.getLangs().includes(browserLanguage)) {
+    if (browserLanguage && this.translateService.getLangs().includes(browserLanguage)) {
       selectedLanguage = browserLanguage;
     } else {
       selectedLanguage = LANGUAGE_CODE_ENGLISH;

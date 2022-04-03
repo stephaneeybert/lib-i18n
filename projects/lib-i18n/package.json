@@ -1,6 +1,6 @@
 {
   "name": "@stephaneeybert/lib-i18n",
-  "version": "0.0.5",
+  "version": "0.0.14",
   "description": "The lib-i18n Angular library",
   "keywords": [
     "Angular",
@@ -14,19 +14,18 @@
   },
   "homepage": "https://github.com/stephaneeyber/lib-i18n#readme",
   "peerDependencies": {
-    "@angular/animations": "~11.0.1",
-    "@angular/common": "~11.0.1",
-    "@angular/compiler": "~11.0.1",
-    "@angular/core": "~11.0.1",
-    "@angular/forms": "~11.0.1",
-    "@angular/platform-browser": "~11.0.1",
-    "@angular/platform-browser-dynamic": "~11.0.1",
-    "@angular/router": "~11.0.1",
+    "@angular/animations": "~13.3.1",
+    "@angular/common": "~13.3.1",
+    "@angular/compiler": "~13.3.1",
+    "@angular/core": "~13.3.1",
+    "@angular/forms": "~13.3.1",
+    "@angular/platform-browser": "~13.3.1",
+    "@angular/platform-browser-dynamic": "~13.3.1",
+    "@angular/router": "~13.3.1",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-
-    "@ngx-translate/core": "^13.0.0",
-    "@ngx-translate/http-loader": "^6.0.0"
+    "tslib": "^2.3.1",
+    "zone.js": "~0.11.5",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0"
   }
 }
