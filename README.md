@@ -1,7 +1,10 @@
 # LibI18n
 
+# On a newly pulled codebase install the application
+npm install
+
 # Bump the library project version
-cd projects/lib-i18n/;
+cd ./projects/lib-i18n/;
 npm version patch;
 cd ../../;
 
