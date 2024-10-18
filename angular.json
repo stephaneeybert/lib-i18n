@@ -45,6 +45,5 @@
     }},
   "cli": {
     "analytics": "1351a870-d668-43b3-a895-1d2df31180a9"
-  },
-  "defaultProject": "lib-i18n"
+  }
 }

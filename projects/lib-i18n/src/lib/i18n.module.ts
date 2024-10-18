@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -10,18 +10,13 @@ export function httpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/i18n/');
 }
 
-@NgModule({
-  imports: [
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
-  ]
-})
+@NgModule({ imports: [TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class I18nModule {
 
   constructor(
